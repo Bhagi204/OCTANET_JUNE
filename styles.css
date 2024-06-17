@@ -1,242 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-
-:root {
-  --primary-color: #231910;
-  --text-dark: #333333;
-  --text-light: #6e797233;
-  --extra-light: #f3f4f6;
-
-  --max-width: 1300px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-input::placeholder {
-  color: var(--extra-light);
-}
-
 body {
-  font-family: "Open Sans", sans-serif;
-  min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("car.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--max-width);
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-.nav__logo a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--extra-light);
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.nav__links .link {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--extra-light);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.nav__links .link:hover {
-  color: var(--primary-color);
-}
-
-.search__box {
-  padding: 0.5rem 0;
-  border-bottom: 2px solid var(--extra-light);
-}
-
-.search__box input {
-  color: var(--extra-light);
-  background-color: transparent;
-  outline: none;
-  border: none;
-}
-
-.search__box i {
-  color: var(--extra-light);
-  font-size: 1.2rem;
-  cursor: pointer;
+    font-family: 'Brush Script std', cursive;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-  display: flex;
-  min-height: 100vh;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 2rem;
-  padding-top: 100px;
-  position: relative;
+    background: rgba(197, 197, 226, 0.8); 
+    border: 2px solid #7d737d; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    min-height: 500px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
 }
 
-.container__left,
-.container__right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-.container__left .content {
-  max-width: 400px;
-  display: grid;
-  gap: 1rem;
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.content h1 {
-  font-size: 4rem;
-  line-height: 4rem;
-  color: var(--extra-light);
-  font-weight: 700;
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid #d4b5d7;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1 1 auto;
 }
 
-.content p {
-  color: var(--extra-light);
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.btns {
-  display: flex;
-  gap: 1rem;
+button:hover {
+    background-color: #218838;
 }
 
-.btns button {
-  padding: 0.5rem 2rem;
-  color: var(--extra-light);
-  font-size: 1rem;
-  background-color: transparent;
-  outline: none;
-  border: 2px solid var(--extra-light);
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: 0.3s;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-button.read__more {
-  background-color: var(--extra-light);
-  color: var(--text-dark);
+li {
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
-button.our__blogs:hover {
-  background-color: var(--text-light);
+li.complete {
+    text-decoration: line-through;
+    color: #aaa;
 }
 
-.chevrons {
-  display: flex;
-  gap: 1rem;
+.priority-low {
+    border-left: 5px solid #2a9d8f;
 }
 
-.chevrons span {
-  height: 40px;
-  width: 40px;
-  font-size: 1.5rem;
-  color: var(--extra-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid var(--extra-light);
-  cursor: pointer;
-  transition: 0.3s;
+.priority-medium {
+    border-left: 5px solid #e9c46a;
 }
 
-.chevrons span:hover {
-  background-color: var(--text-light);
+.priority-high {
+    border-left: 5px solid #e76f51;
 }
 
-.container__right {
-  justify-content: flex-end;
+.task-details {
+    flex: 1;
 }
 
-form {
-  width: 350px;
-  display: grid;
-  border-radius: 5px;
-  background-color: var(--text-light);
-  color: var(--extra-light);
+.task-actions {
+    display: flex;
+    gap: 5px;
 }
 
-form h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 2rem;
+.task-actions button {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
 }
 
-.form__group {
-  display: grid;
-  padding: 0 2rem;
-  margin-bottom: 1rem;
+.complete-btn {
+    background-color: #ce93e4;
 }
 
-.form__group input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  color: var(--extra-light);
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid var(--extra-light);
+.complete-btn:hover {
+    background-color: #bc4edd;
 }
 
-form button {
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: var(--extra-light);
-  cursor: pointer;
+.delete-btn {
+    background: #dc3545;
 }
 
-.bottom__tracker {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1rem;
-}
-
-.bottom__tracker span {
-  display: inline-block;
-  height: 4px;
-  width: 100px;
-  background-color: var(--text-light);
-}
-
-.bottom__tracker span:nth-child(2) {
-  background-color: var(--extra-light);
+.delete-btn:hover {
+    background: #c82333;
 }
